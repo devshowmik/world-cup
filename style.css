@@ -133,6 +133,11 @@ upcoming match style
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    transition-duration: .2s;
+}
+.match:hover {
+	box-shadow: 0px 0px 12px -6px #919191;
+	cursor: pointer;
 }
 .match .competitor{
     display: flex;
@@ -161,6 +166,11 @@ Blog style
 .blogs article{
     border: 1px solid #E8E8E8;
     border-radius: 10px;
+    transition-duration: .3s;
+}
+.blogs article:hover {
+	box-shadow: 0px 0px 12px -6px #919191;
+	cursor: pointer;
 }
 .blogs article img{
     width: 100%;
@@ -227,6 +237,9 @@ footer ul{
 display: flex;
 justify-content: space-evenly;
 font-size: 16px;
+}
+footer ul li:hover a{
+    color: #DD0000;
 }
 footer a{
     color: #B9B9B9;
