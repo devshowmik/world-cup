@@ -176,3 +176,50 @@ footer a{
     color: #4D4D4D;
     margin: 5px 0 0 0;
 }
+/* ----------------------
+       Blog style 
+------------------------*/
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px; 
+}
+.blogs article{
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+}
+.blogs article img{
+    width: 100%;
+}
+.blog-content{
+    padding: 0 10px;
+}
+.blogs article .tags a {
+    font-size: 16px;
+    color: #4D4D4D;
+    margin: 0;
+    font-weight: 600;
+    padding: 5px 15px;
+    border: 1px solid #4D4D4D;
+    display: inline-block;
+    border-radius: 10px;
+}
+.blogs article h3{    
+    font-size: 20px;
+    color: #161616;
+    margin: 10px 0 0 0;
+}
+.blogs article .info{
+    display: flex;
+    gap: 20px;
+}
+.blogs article .info p{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.blogs article .info a {
+    font-size: 16px;
+    color: #1616169c;
+    margin: 5px 0 0 0;
+}
