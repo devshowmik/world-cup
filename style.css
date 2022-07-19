@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 /* ----------------------
-        Global style 
+Global style 
 ------------------------*/
 body{
     font-family: 'Poppins', sans-serif;
@@ -39,7 +39,7 @@ a{
     transform: translateX(10px);
 }
 /* ----------------------
-        Header style 
+Header style 
 ------------------------*/
 header{
     background-color: #161616;
@@ -50,6 +50,9 @@ header{
     padding: 20px 80px 0 80px;
     align-items: center;
     margin-top: 30px;
+}
+header .text-area{
+    padding-bottom: 30px;
 }
 header .text-area h2{
     font-size:70px ;
@@ -62,47 +65,17 @@ header .text-area p{
     color:#fff ;
     font-weight: 400;
 }
-header .image-area{
-    display: flex;
-    justify-content: center;
-
+header .image-area {
+	display: flex;
+	align-self: end;
 }
 header .image-area img{
 width: 100%;
 align-items: baseline;
 }
-/* ----------------------
-        Footer style 
-------------------------*/
-footer{
-    background-color: #161616;
-    padding: 80px 0;
-    margin-top: 30px;
-    color: #fff;
-    text-align: center;
-}
-footer h2{
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 1.2em;
-}
-footer hr{
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.10);
-    border-radius: 0;
-    margin: 30px 0;
-}
-footer ul{
-display: flex;
-justify-content: space-evenly;
-font-size: 16px;
 
-}
-footer a{
-    color: #B9B9B9;
-}
 /* ----------------------
-        main content style 
+main content style 
 ------------------------*/
 .main-content{
     display: grid;
@@ -111,11 +84,11 @@ footer a{
     margin-top: 30px;
 }
 /* ----------------------
-        main content navigation style 
+main content navigation style 
 ------------------------*/
 .main-content .content-nav ul{
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     text-align: center;
     background-color: #161616;
     padding: 20px;
@@ -142,9 +115,10 @@ footer a{
 .main-content .content-nav ul li:hover a{
     color: #fff;
     background-color: #DD0000;
+    border-color: #DD0000;
 }
 /* ----------------------
-        upcoming match style 
+upcoming match style 
 ------------------------*/
 .upcoming-match{
     display: grid;
@@ -177,7 +151,7 @@ footer a{
     margin: 5px 0 0 0;
 }
 /* ----------------------
-       Blog style 
+Blog style 
 ------------------------*/
 .blogs{
     display: grid;
@@ -222,4 +196,156 @@ footer a{
     font-size: 16px;
     color: #1616169c;
     margin: 5px 0 0 0;
+}
+.view-more {
+    display: none;
+	text-align: center;
+	margin-top: 30px;
+}
+/* ----------------------
+Footer style 
+------------------------*/
+footer{
+    background-color: #161616;
+    padding: 80px 0;
+    margin-top: 30px;
+    color: #fff;
+    text-align: center;
+}
+footer h2{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+footer hr{
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 0;
+    margin: 30px 0;
+}
+footer ul{
+display: flex;
+justify-content: space-evenly;
+font-size: 16px;
+}
+footer a{
+    color: #B9B9B9;
+}
+/* ----------------------
+responsive style
+------------------------*/
+
+@media screen and (max-width:835px){
+/* ----------------------
+header responsive style
+------------------------*/
+
+    header .text-area h2{
+        font-size:40px ;
+    }
+    header .text-area p{
+        font-size:14px ;
+    }
+/* ----------------------
+main content navigation responsive style
+------------------------*/
+.main-content .content-nav ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    background-color: transparent;
+}
+.main-content{
+    grid-template-columns: 1fr;
+}
+.main-content .content-nav ul li {
+	margin-top: 0px;
+}
+.main-content .content-nav ul a {
+	padding: 10px;
+}
+/* ----------------------
+upcoming match responsive style 
+------------------------*/
+.upcoming-match{
+    grid-template-columns: repeat(2,1fr);
+    padding: 0 20px;
+}
+/* ----------------------
+Blog responsive style 
+------------------------*/
+.blogs{
+    grid-template-columns: repeat(2,1fr);
+    padding: 0 20px;
+}
+.blogs article h3{    
+    font-size: 18px;
+}
+.blogs article:last-child{
+    display: none;
+}
+.view-more {
+    display: block;
+}
+/* ----------------------
+Footer responsive style 
+------------------------*/
+footer ul{
+    display: block;
+}
+footer ul li {
+	width: 24%;
+	display: inline-block;
+}
+
+}
+
+@media screen and (max-width:430px){
+/* ----------------------
+header responsive style
+------------------------*/
+header{
+    grid-template-columns: repeat(1,1fr);
+    padding: 20px 20px 0 20px;
+    margin-top: 0px;
+    text-align: center;
+}
+    header .text-area h2{
+        font-size:22px ;
+    }
+
+/* ----------------------
+main content navigation responsive style
+------------------------*/
+.main-content .content-nav ul{
+    grid-template-columns: repeat(1,1fr);
+}
+
+/* ----------------------
+upcoming match responsive style 
+------------------------*/
+.upcoming-match{
+    grid-template-columns: repeat(1,1fr);
+    padding: 0 20px;
+}
+/* ----------------------
+Blog responsive style 
+------------------------*/
+.blogs{
+    grid-template-columns: repeat(1,1fr);
+}
+.view-more {
+    display: none;
+}
+/* ----------------------
+Footer responsive style 
+------------------------*/
+footer ul{
+    display: block;
+}
+footer ul li {
+	width: 100%;
+	display: block;
+}
+
 }
